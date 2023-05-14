@@ -22,14 +22,31 @@ li {
     float: left;
     border-right: 1px solid grey;
 }
-
 .nav {
     display: block;
     text-align: center;
     padding: 0px 15px;
     text-decoration:  none;
 }
-
-a:hover{
+a:hover {
     background-color: whitesmoke;
+}
+hr { 
+    width: 40%; 
+    height: 2px; 
+    color:black; 
+    background-color: black;
+}
+div#AboutMe {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: fit-content;
+}
+div.photo {
+    align-self:center;
+}
+p {
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
 }
