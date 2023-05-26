@@ -1,55 +1,104 @@
-body{
-    background-color: navy;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: white;
-    align-items: center;
-}
-header{
-    font-size: 5vh;
-    font-family:sans-serif;
+/* Body */
+body {
+    font-family: Segoe UI, Roboto, Helvetica Neue, sans-serif;
+    color: #333;
+    font-size: 1.6rem;
+  }
+  
+  /* Container */
+  .container {
+    background-color: #eee;
+    margin: 30px 0px;
+    border-radius: 5px;
+  }
+  
+  .container header {
+    padding: 25px 0;
+    width: 100%;
     text-align: center;
-}
-header small{
-    font-size: 2vh;
-}
-.img-container{
+  }
+  
+  .container h1 {
+    font-size: 2.5rem;
+  }
+  .container p {
+    font-size: 1rem;
+  }
+  
+  /* Figure */
+  figure {
+    background-color: #ffffff;
+    width: 96.7%;
+    margin: 0 10px;
+    padding: 10px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-}
-img {
-    margin-bottom: 10px;
-}
-small {
-    margin-bottom: 5px;
-}
-.container{
-    display: flex;
-    flex-direction: row;
     justify-content: center;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
     align-items: center;
-}
-.page-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 80%;
-    background-color: orange;
-    padding: 5px;
-    margin: 0;
-}
-p {
-    font-size: 1.5vh;
-    margin: 10px 0 10px 10px;
-}
-footer{
-    display: flex;
-    flex-direction: column;
+  }
+  
+  figcaption {
+    margin: 15px 0 5px 0;
     text-align: center;
-    width: 80%;
-}
-a {
-    text-decoration: none;
-    color: white;
-}
+    font-size: 1rem;
+  }
+  
+  /* Section */
+  section {
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  section h2 {
+    font-size: 1.17rem;
+    margin: 50px 0;
+    text-align: center;
+  }
+  
+  section ul {
+    width: 90%;
+  }
+  
+  section li {
+    margin: 15px 0;
+    font-size: 1rem;
+    padding: 0 10px;
+    line-height: 1.5;
+  }
+  
+  /* Quote */
+  #quote {
+    margin: 50px auto 0 auto;
+    width: 50%;
+    max-width: 545px;
+    text-align: left;
+  }
+  
+  #quote-author {
+    margin: 20px auto;
+    width: 50%;
+    max-width: 545px;
+    text-align: left;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 50px;
+  }
+  
+  footer a {
+    color: #477ca7;
+  }
+  
+  footer a:visited {
+    color: #74638f;
+  }
