@@ -1,0 +1,52 @@
+Storing a variable: $____
+
+Place children elements inside the parents' styles
+
+a mixin is a group of CSS declarations that can be reused throughout the style sheet.
+    @mixin ____(parameters){ 
+        -webkit-____: parameters;
+        -moz-____: parameters;
+        -ms-____: parameters;
+        ____: parameters;
+    }
+Using a mixin:
+    element {
+        @include ____(parameters)
+    }
+
+Condition:
+    @if
+    @else if
+    @else
+
+Loop:
+    @for $__ from _ to/through _ {
+        element-#{$__} {
+            
+        }
+    }
+        start to end: excludes end number
+        start through end: includes end number
+
+Map:
+    @each $__ in ____ {
+        #{$__} {
+
+        }
+    }
+
+Conditional Loop:
+    $__ : ____;
+    @while $__ ____ {
+        element-#{$__} {
+
+        }
+        $__ : $__ ____
+    }
+
+Partials: separate files that hold saegments of CSS code/
+    Imported and Used in other Sass files
+    Start with "_"
+
+Extend:
+    @extend element
