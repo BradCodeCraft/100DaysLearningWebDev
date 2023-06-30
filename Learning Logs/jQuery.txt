@@ -1,0 +1,16 @@
+methods:
+    addClass()
+    removeClass()
+    css()
+    html()
+    text()
+    appendTo()
+    clone()
+    parent()
+    children()
+
+selectors:
+    ("____")
+    ("____:nth-child(n)")
+    ("____:odd") starts at 0
+    ("____:even") starts at 1
