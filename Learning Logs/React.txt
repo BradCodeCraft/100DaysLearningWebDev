@@ -1,0 +1,81 @@
+Simple JSX Element
+    React uses a syntax extension of JS called JSX that allows you to write HTML within JS.
+        Benefits:
+            Let you use the full programmatic power of JS within HTML
+            Helps to keep your code readable
+
+    Write JS codes in curly braces within JSX:
+        { ____ }
+
+    Use transpiler Babel to compile JSX code into JS
+
+    ReactDOM.render(JSX, document.getElementById('root'))
+        This places your JSX into React's own lightweight representation of the DOM
+
+Complex JSX Element:
+    Nested JSX must return a single element
+        One parent element would wrap all of the other levels of nested element
+
+Add Comments in JSX
+    You use the syntax {/* ____ */}
+
+Render HTML Elements to the DOM
+    ReactDOM offers a simple method to render Rect elements to the DOM which looks like this:
+        ReactDOM.render(componentToRender, targetNode)
+
+        ReactDOM.render() must be called after the JSX element declarations
+
+Define an HTML Class in JSX
+    In JSX, you can no longer use the word "class" to define HTML classes.
+        Instead, JSX uses "className"
+    Naming connvention for all HTML attributes and event references in JSX become camelCase.
+    
+Self-Closing JSX Tags
+    Any JSX element can be written with a self-closing tag, and every element must be closed.
+        e.g.:
+            <br />
+            <hr />
+            <div />
+    The differnce is that in the first syntax version, there is no way to include anything in the <div />
+
+Create a Stateless Functional Component
+    There are two ways to create a React component.
+        Using JS function
+            Defining a component in this wway creates a stateless functional component.
+                i.e., component that can receive data and render it, but does not manage or track changes to that data.
+            To create a component with a function, you simply write a JS function that returns either JSX or null
+            React requires your function name to begin with a capital letter
+            
+            Because a JSX component represents HTML, you could put several components together to create a more complex HTML page.
+                It allows you to compose your UI from many separate, isolated components.
+                This makes it easier to build and maintain complex user interfaces/
+
+Create a React Component
+    The other way to define a React component is with the ES6 "class" syntax.
+        class ____ extends React.Component {
+            constructor(props) {
+                super(props);
+            }
+        }
+            "super()" calls the constructor of the parent class, i.e. React.Component.
+
+Create a Component with Composition
+    To compose components together, you could create an "App" parent component which renders each of these three components as children.
+    To render a component as a child in a React component, you include the component name written as a custom HTML tag in the JSX.
+        e.g.:
+            return (
+                <App>
+                    <Navbar />
+                    <Dashboard />
+                    <Footer />
+                </App>
+            )
+        When React encounters a custom HTML tag that references another component, it renders the markup for that component in the location of the tag.
+            This should illustrate the parent/child relationship between the parent component and child components
+
+Use React to Render Nested Components
+    Component composition is one of React's powerful features.
+        When you work with React, it is important to start thinking about your use interface in terms of components.
+        You break down your UI into its basic building blocks, and those pieces become the components.
+            This helps to separate the code responsible for the UI from the code responsible for handling your application logic.
+            It can greatly simplify the development and maintenance of complex projects.
