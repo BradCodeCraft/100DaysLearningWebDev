@@ -1,0 +1,13 @@
+@mixin border-radius($val) {
+    -webkit-border-radius: $val;
+    -moz-border-radius: $val;
+    -ms-border-radius: $val;
+    border-radius: $val;
+}
+
+.navlink:hover {
+    text-decoration: none;    
+    background-color: #337aBa;
+    color: #ffba08;
+    @include border-radius(5rem);
+}
