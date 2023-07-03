@@ -107,4 +107,71 @@ Pass Props to a Stateless Functional Component
     In React, you can pass props, or properties, to child components.
     You use custom HTML attributes created by You and supported by React to be passed to the component.
     It is standard to call this value props and when dealing with stateless functional components, you basically consider it as an argument to a function which returns JSX.
-    
+
+Pass an Array as Props
+    To pass an array to a JSX element, it must be treated as JavaScript and wrapped in curly braces.
+        e.g.:
+            <ParentComponent>
+                <ChildComponent colors={["green", "blue", "red"]} />
+            <ParentComponent>
+    Array methods such as 'join()' can be used when accessing hte property.
+        e.g.:
+            const ChildComponent = (prop) => <p>{props.colors.join(", ")}</p>
+            => <p>green, blue, red</p>
+
+Use Default Props
+    You can assign default props to a component as a property onm the component itself and React assigns the default prop if necessary.
+        This allows you to specify what a prop value should be if no value is explicitly provided.
+            e.g.: MyComponent.defaultProps = {location: 'San Francisco'}
+        React assigns default props if props are undefined, but if you pass 'null' as the value for a prop, it will remain 'null'.
+
+Override Default Props
+    The way to override the default props is to explicitly set the prop values for a component.
+
+Use PropTypes to Define the Props You Expect
+    React provides usefulf type-checking features to verify that components receive props of the correct type.
+        You can set 'propTypes' on your component to require the data to be of type 'array'
+            This will throw a useful warning when the data is of any other type.
+    It's considered a best practice to set propTypes when you know the type ofa prop ahead of time.
+        You can define a propTypes property for a componentin the same way you defined defaultProps.
+            Doing this will check that props of a given key are present with a given type.
+        e.g.: 
+            Component.propTypes = {handleClick: PropTypes.func.isRequired}
+                PropTypes.func checks that handleClick is a function
+                isRequired tells React that handleClick is a required property for that component.
+                    You will see a awarning if that prop isn't provided. 
+        Among the seven JS primitive types, function and boolean are the only two that use unusual spelling.
+            func for function
+            bool for boolean
+
+Access Props Using this.props
+    The ES6 class component uses a slightly different convention to access props.
+    Anytime you refear to a class component within itself, you use the 'this' keyword.
+        To access props within a class component, you preface the code that you use to access it with 'this'.
+            e.g.: if an ES6 class component has a prop called "data", you write {this.props.data} in JSX.
+
+Review Using Props with Stateless Functional Components
+    Stateless functional components act like pure functions.
+        They accept props as input and return the same view every time they are passed the same props.
+    A "stateless functional component" is any function you write which accepts props and returns JSX.
+        A "stateless component", on the other hand, is a class that extends React.Component, but does not use internal state.
+        You may see stateful components referred to simply as components or React components.
+    A common pattern is to try to minimize statefulness and to create stateless functional components wherever possibble.
+        This helps contain your state manaagement to a specific area of your application.
+            In turn, this improves development and maintenance of your app by making it easier to follow how changes to state affect its behavior.
+
+Create a Stateful Component
+    One of the most important topics in React is "state"
+        State consists of any data your application needs to know about, that can change over time.
+        You want your apps to respond to state changes and present an updated UI when necessary.
+    You create state in a React component by declaring a "state" property on the component class in its "constructor".
+        This initializes the component with "state" when it is created.
+        The "state" property must be set to a JS "object".
+            e.g.: 
+            this.state = {
+                ____
+            }
+    You have access to the "state" object throughout the life of your component.
+        You can update it, render it in your UI, and pass it as props to child components.
+        The "state" objec t can be as complex or as simple as you need it to be.
+            Note: you must create a class component by extending 'React.Component' in order to create 'state' like this.
