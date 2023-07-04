@@ -204,3 +204,53 @@ Render State in the User Interface Another Way
                     <h1>____</h1>
                 )
             }
+
+Set State with this.setState
+    React provides a method for updating component 'state' called 'setState'.
+        You call the 'setState' method within your component class like so: this.setState(), passing in an object with key-value pairs.
+    React expects you to never modify 'state' directly, instead always using this.setState() when state changes occur.
+        React may batch multiple state updates in order to improve performance.
+            I.e., state updates through the 'setState' method can be asynchronous.
+        
+Bind 'this' to a Class Method
+    A class method typically needs to use the 'this' keyword so it can access properties on the class (such as 'state' and 'props') inside the scope of the method.
+    There are a few ways to allow your class methods to access 'this'
+        One common way is to explicitly bind 'this' in the constructor so 'this' becomes bound to the class methods when the component is initialized.
+
+Use State to Toggle an Element
+    Sometimes you might need to know the previous state when updating the sate. However, state updates may be asynchronous - this means React may batch multiple setState() clals into a single update.
+        This means you can't rely on the previous value of this.state or this.props when calculating the next value.
+    You should pass 'setState' a function that allows you to access state and props.
+        Using a function with 'setState' guarantees you are working with the most current values of state and props.
+    e.g.:
+        this.____ = this.____.bind(this) -> bind 'this'
+        ...
+        ____() {
+            this.setState(state => ({
+                _________
+            }))
+        }
+
+Write a Simple Counter
+    Create increment, decrement, and reset method
+
+Create a Controlled Input
+    Your application may have more complex interactions between 'state' and the rendered UI.
+        With React, yoiu can move this mutable state into a React component's 'state'.
+        The user's input becomes part of the application 'state', so React controls the value of that input field.
+
+Create a Controlled Form
+    You must call 'event.preventDefault()' in the submit handler, to prevent the default form submit behavior which will refresh the web page.
+
+Pass State as Props to Child Components
+    A common pattern is to have a stateful component contraining the 'state' important to your app, that then renders child components.
+        You want these components to have access to some pieces of that 'state', which are passed in as props.
+        This pattern illustrates some important paradigms in React.
+            The first is unidirectional data flow.
+                State flows in one direction down the tree of your paplication's components, from the stateful parent component to child components.
+                The child components only receive the state data they need.
+            The second is that complex satateful apps can be broken down into just a few, or maybe a single, stateful component.
+                The rest of your components simply receive state from the as props, and render a UI from that state.
+                It begins to cresate a separation where state management is handled in one part of code and UI rendering in another.
+                This principle of separating state logic from UI logic is one of React's key principles.
+                    When it's used correctly, it makes the design of complex, stateful applications much easier to manage. 
