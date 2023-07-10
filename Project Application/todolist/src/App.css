@@ -1,0 +1,98 @@
+@import './BootStrap/css/bootstrap.css';
+
+/* Div */
+.App {
+  /* Sizing */
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  /* Display */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Background */
+  background-color: #223D56;
+  /* Font */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Form */
+.new-item-form {
+  /* Display */
+  display: flex;
+  flex-direction: column;
+  /* Text */
+  text-align: center;
+}
+
+/* Button */
+.add {
+  color: #0B243B;
+}
+
+/* Unordered list */
+ul {
+  list-style: none;
+}
+
+/* Headers */
+h1, h2, ul {
+  color: snow;
+}
+
+/* Screen size */
+@media only screen and (max-width: 1080px) {
+  /* Form */
+  .new-item-form {
+    /* Sizing */
+    width: 20vw;
+  }
+
+}
+
+@media only screen and (min-width: 1080px) {
+  /* Form */
+  .new-item-form {
+    /* Sizing */
+    width: 20vw;
+
+  }
+  /* Input */
+  #item {
+    /* Sizing */
+    width: 100%;
+    height: 4rem;
+    margin-bottom: 10px;
+    padding: 1rem;
+    /* Background */
+    background-color: #ACCBE1;
+    /* Border */
+    border: none;
+    border-radius: 0.55rem;
+    /* Font */
+    font-size: 2rem;
+  }
+
+  /* Button */
+  .add {
+    color: #0B243B;
+    font-size: 2rem;
+  }
+  
+  /* Unordered list */
+  ul {
+    font-size: 3rem;
+  }
+  
+  /* Input */
+  #check {
+    margin-right: 1rem;
+  }
+
+  /* Button */
+  .btn-danger {
+    margin-left: 1rem;
+  }
+}
