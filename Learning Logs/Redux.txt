@@ -52,3 +52,15 @@ Use a Switch Statement to Handle Multiple Actions
         E.g.: You want to have a state representation for when users are logged in and when they are logged out.
             You represent this with a single state object with the property 'authenticated'.
         You also need action creators that create actions corresponding to user login and user logout, along with the action objects themselves.
+
+Use const for Action Types
+    A common practice when working with Redux is to assign action types as read-only constants, then reference these constants wherever they are used.
+        You can refactor the code you're working with to write the action types as 'const' declarations.
+
+Register a Store Listener
+    Another method you have access to on the Redux 'store' ivhect us 'store.subscribe()'.
+        This allows you to subscribe listener functions to the store, which are called whenever a n action is dispatched against the store.
+        One simple use for this method is to subscribe a function to your store that simply logs a message every time an action is received and the store is updated.
+
+Combine Multiple Reducers
+    
