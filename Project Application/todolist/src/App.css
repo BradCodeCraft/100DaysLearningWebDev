@@ -1,0 +1,16 @@
+.container {
+    /* Sizing */
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    /* Background */
+    background-color: #283589;
+    /* Display */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+h1, h2, h3, h4, li {
+    color: white;
+}
