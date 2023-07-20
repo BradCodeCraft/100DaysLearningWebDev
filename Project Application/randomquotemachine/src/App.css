@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  /* Background */
+  background-color: lightslategray;
+  /* Display */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Position */
+  position: absolute;
+  /* Size */
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  /* Background */
+  background-color: white;  
+  /* Border */
+  border-radius: 10px;
+  /* Size */
+  width: 35%;
+  height: 30%;
+  padding: 30px;
+}
+
+#quote-box {
+  /* Position */
+  position: relative;
+  /* Size */
+  width: 90%;
+  height: 50%;
+}
+
+#text {
+  font-size: 1.25rem;
+  color: lightslategray;
+}
+
+#author {
+  float: right;
+  color: lightslategray;
+}
+
+#tweet-quote {
+  /* Background */
+  background-color: lightslategray;
+  /* Border */
+  border: none;
+  border-radius: 10px;
+  /* Color */
+  color: white;
+  /* Float */
+  float: left;
+  /* Size */
+  margin-top: 1rem;
+  padding: 7px;
+}
+
+#new-quote {
+  /* Background */
+  background-color: lightslategray;
+  /* Border */
+  border: none;
+  border-radius: 10px;
+  /* Color */
+  color: white;
+  /* Float */
+  float: right;
+  /* Size */
+  margin-top: 1rem;
+  padding: 10px;
+}
