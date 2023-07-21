@@ -5,8 +5,8 @@ class Quote extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            text: '',
-            author: '',
+            text: 'Life is like throwing a dice; you can\'t control the outcome, but you can control which dice to use',
+            author: 'unknown',
         };
         this.requestChange = this.requestChange.bind(this);
     }
@@ -16,9 +16,11 @@ class Quote extends React.Component {
         quoteDict.then(response => response.json())
             .then(data => {
                 let rng = Math.floor(Math.random() * data.length);
+                let dataText = data[rng]['text']
+                let author = (data[rng]['author'] == null) ? "unknown" : data[rng]['author']
                 this.setState({
-                    text: data[rng]['text'],
-                    author: data[rng]['author']
+                    text: dataText,
+                    author: author
                 });
             });
         
