@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaTwitter } from "react-icons/fa";
 import './App.css'
 
 class Quote extends React.Component {
@@ -35,7 +36,7 @@ class Quote extends React.Component {
                         <p id='author'>{this.state.author}</p>
                     </blockquote>
                     <div className='row'>
-                        <a id='tweet-quote' href='twitter.com/intent/tweet'>Twitter</a>
+                        <a id='tweet-quote' href='twitter.com/intent/tweet'><FaTwitter /></a>
                         <button className='btn' id='new-quote' onClick={this.requestChange}>New Quote</button>
                     </div>
                 </div>

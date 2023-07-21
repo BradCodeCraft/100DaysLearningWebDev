@@ -46,7 +46,7 @@
 #author {
   float: right;
   color: lightslategray;
-  margin-top: 1rem;
+  margin-top: 1em;
 }
 
 #author::before {
@@ -65,7 +65,7 @@
   float: left;
   /* Size */
   margin-top: 1rem;
-  padding: 7px;
+  padding: 0.5rem;
 }
 
 #new-quote {
