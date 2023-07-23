@@ -1,88 +1,72 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.page {
-  /* Background */
-  background-color: lightslategray;
-  /* Display */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* Position */
-  position: absolute;
-  /* Size */
-  width: 100vw;
-  height: 100vh;
+.app {
+    min-height: 100vh;
+    display: flex;
+    background: lightslategrey;
 }
 
 .container {
-  /* Background */
-  background-color: white;  
-  /* Border */
-  border-radius: 10px;
-  /* Size */
-  width: 35%;
-  height: 35%;
-  padding: 30px;
+    margin: auto;
+    width: 100%;
+    max-width: 400px;
+    min-height: 180px;
+    padding: 30px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 4px 4px 1px rgba(255,255,255, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-items: space-between;
+    align-items: flex-start;
 }
 
 #quote-box {
-  /* Position */
-  position: relative;
-  /* Size */
-  width: 100%;
-  height: 50%;
-  margin-bottom: 0;
+    height: 50%;
 }
 
-#text {
-  font-size: 1.25em;
-  color: lightslategray;
+p {
+    color: lightslategrey;
+    font-size: 20px;
+    font-weight: 600;
+    word-wrap: break-word;
 }
 
-#author {
-  float: right;
-  color: lightslategray;
-  margin-top: 1em;
+p:last-of-type {
+    margin: 10px 0;
 }
 
-#author::before {
-  content: "- "
+.btn-container {
+    width: 100%;
 }
 
-#tweet-quote {
-  /* Background */
-  background-color: lightslategray;
-  /* Border */
-  border: none;
-  border-radius: 10px;
-  /* Color */
-  color: white;
-  /* Float */
-  float: left;
-  /* Size */
-  margin-top: 1rem;
-  padding: 0.5rem;
+button {
+    float: right;
+    border: none;
+    outline: none;
+    margin-right: 10px;
 }
 
-#new-quote {
-  /* Background */
-  background-color: lightslategray;
-  /* Border */
-  border: none;
-  border-radius: 10px;
-  /* Color */
-  color: white;
-  /* Float */
-  float: right;
-  /* Size */
-  margin-top: 1rem;
-  padding: 10px;
+a {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
 }
 
-.row {
-  margin-top: 3rem;
+.btn {
+    color: white;
+    background-color: lightslategray;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 700ms ease-in-out
+}
+
+.btn:hover {
+    background-color: slategray
 }
